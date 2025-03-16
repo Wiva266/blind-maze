@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1000, initial-scale=1">
+    <title>BlindMaze | William Vanther</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Home Screen -->
+    <div id="welcome-screen">
+        <p>Welcome Player!</p>
+        <h1>Blind Maze - Game</h1>
+        <section>
+            <input type="text" id="username" placeholder="Masukkan Username">
+        </section>
+        <section>
+            <button id="play-btn" disabled>Play Game</button>
+            <button id="instructions-btn">Show Instructions</button>
+            <button id="leaderboard-btn">Leaderboard</button>
+        </section>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="game-over-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Game Over!</h2>
+            <p>Username: <span id="game-over-username"></span></p>
+            <p>Stage: <span id="game-over-stage"></span></p>
+            <button id="save-score-btn">Save Score</button>
+        </div>
+    </div>
+
+    <!-- Leaderboard Modal -->
+    <div id="leaderboard-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Leaderboard</h2>
+            <ul id="leaderboard-list"></ul>
+            <button id="close-leaderboard-btn">X</button>
+            <button id="clear-leaderboard-btn">Clear Leaderboard</button>
+        </div>
+    </div>
+
+    <!-- Instructions Modal -->
+    <div id="instructions-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Game Instructions</h2>
+            <p>Welcome to BlindMaze!</p>
+            <p>Your goal is to navigate through the maze using the arrow keys.</p>
+            <p>Every level gets harder, so stay sharp!</p>
+            <p>Use the 'Hint' button if you're stuck, but it costs a life.</p>
+            <p>Good luck!</p>
+            <button id="close-instructions-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Canvas Game -->
+    <div id="game-container" class="hidden">
+        <div id="game-info">
+            <span>Stage: <span id="stage-number">1</span></span>
+            <span>Time Left: <span id="timer">20</span>s</span>
+            <span>Lives: <span id="lives">5</span></span>
+            <button id="hint-btn">Hint</button>
+        </div>
+        <div class="game-board-parent">
+            <div id="game-board"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
